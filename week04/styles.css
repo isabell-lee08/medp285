@@ -1,0 +1,173 @@
+body {
+    background-image: url("images/starBG.png");
+    background-size: 50%;
+    color: #fff;
+    padding: 20px;
+    width: 800px;
+    font-family: "Inter Tight", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    display: flex;
+    margin: auto;
+}
+
+#wrapper {
+    background-color: rgb(21, 26, 74);
+}
+
+header {
+    background-color: rgb(137, 40, 109);
+    padding: 20px;
+}
+
+h1 {
+    font-family: "Encode Sans SC", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+h2 {
+    font-family: "Encode Sans SC", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    margin: 0px;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Encode Sans SC", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    text-align: right;
+}
+
+hr {
+    border-top: 3px dotted #fff;
+    border-bottom: 0px;
+    color:#fff;
+    margin: 0px;
+    background-color:rgb(21, 26, 74);
+}
+
+nav {
+    background-color: rgb(156, 141, 222);
+    padding: 5px 0px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    color: rgb(139, 46, 164);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(216, 167, 68);
+}
+
+a:hover {
+    color: #fff;
+}
+
+nav li {
+    display: inline;
+    margin: 0px 15px;
+    font-family: "Inter Tight", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+}
+
+main {
+    background-color: rgb(73, 51, 140);
+}
+
+section {
+    background-color: rgb(21, 26, 74);
+    padding: 20px;
+}
+
+article {
+    background-color: rgb(0, 0, 0);
+    border: #fff dotted 3px;
+    margin: 10px;
+}
+
+.bodyText {
+    padding: 10px 20px;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+footer {
+    background-color: rgb(28, 70, 88);
+    padding: 5px 20px;
+}
+
+img {
+    width: 100%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+.overlay, .g-overlay {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 0px 10px 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+  }
+
+.container:hover .overlay, .g-container:hover .g-overlay {
+    opacity: 1;
+}
+
+.g-container {
+    position: relative;
+    width: 100%;
+}
+
+.g-container img {
+    width: 100%;
+  }
+
+.g-image {
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+
