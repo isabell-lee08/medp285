@@ -1,0 +1,155 @@
+/* START border-box fix */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* END border-box fix */
+
+body,
+main,
+.wrapper,
+.stack {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body {
+    align-items: center;
+    justify-content: space-evenly;
+
+    color: white;
+    background: rgb(18, 20, 19) url("images/rain_bg.gif") fixed center no-repeat;
+    background-size: cover;
+
+    font-family: "Magra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+h1,
+h2,
+h3 {
+    margin: 0px;
+    font-family: "Xanh Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* MAIN */
+
+.wrapper {
+    width: 700px;
+}
+
+.wrapper>* {
+    padding: 20px;
+}
+
+header {
+    background: rgb(0, 0, 0);
+    flex: 1 0 200px;
+}
+
+nav {
+    background: inherit;
+}
+
+main {
+    background: rgb(42, 49, 51);
+    flex: 1 1 400px;
+    gap: 20px;
+}
+
+.main_image {
+    flex: 1 1 500px;
+}
+
+blockquote {
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* MAIN */
+
+/* SIDEBAR */
+
+.stack {
+    flex: 1 0 200px;
+}
+
+aside {
+    background: rgb(0, 0, 0);
+    flex: 1 1 200px;
+    padding: 20px;
+}
+
+.side_image {
+    flex: 1 1 200px;
+}
+
+/* SIDEBAR */
+
+footer {
+    background: black;
+    flex: 1 0 100%;
+}
+
+/* LINKS */
+
+nav a,
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover,
+a {
+    text-decoration: none;
+    color: rgb(186, 76, 76);
+}
+
+li {
+    list-style: none;
+}
+
+/* LINKS */
+
+img {
+    width: 100%;
+    flex: 1 1 auto;
+    object-fit: cover;
+    height: 100%;
+    border: 3px dashed white;
+}
+
+/* GALLERY */
+
+.alt {
+    background-color: rgb(18, 20, 19);
+}
+
+.text {
+    flex: 1 1 300px;
+}
+
+.gallery_image {
+    flex: 1 1 200px;
+}
+
+a img {
+    border: 3px dashed rgb(186, 76, 76);
+}
+
+a img:hover {
+    border: 3px dashed white;
+}
+
+/* GALLERY */
