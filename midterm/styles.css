@@ -1,0 +1,299 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* CONTENT */
+body {
+    background: rgb(255, 0, 0);
+    font-size: 17px;
+    display: flex;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    width: 475px;
+    padding: 40px 0px;
+    margin: auto;
+}
+
+header {
+    grid-column: 1 / 11;
+    grid-row: 1 / 2;
+}
+
+main {
+    grid-column: 1 / 11;
+}
+
+nav {
+    grid-column: 11 / 13;
+    height: auto;
+    grid-row: 1 / 3;
+    padding-left: 20px;
+}
+
+header,
+nav,
+footer {
+    font-family: "Cardo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img {
+    display: block;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+}
+
+hr {
+    color: transparent;
+}
+
+.anchor {
+    height: 25px;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav a:hover,
+nav .surface a:hover {
+    color: rgb(191, 81, 42);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+/* TABLE */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 3px solid rgb(255, 255, 255);
+    padding: 10px;
+}
+
+th {
+    text-align: right;
+}
+
+/* SURFACE */
+.surface {
+    background: url(images/surface/surface_bg.jpg) center/cover no-repeat fixed;
+    font-family: "Cardo", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    color: rgb(42, 65, 72);
+    overflow: hidden;
+}
+
+.surface header {
+    grid-column: 1 / 4;
+}
+
+.surface main {
+    grid-column: 4 / 11;
+}
+
+.surface a {
+    color: rgb(42, 65, 72);
+}
+
+.seagull {
+    animation-name: passing;
+    position: absolute;
+    right: -150px;
+    top: 350px;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+}
+
+@keyframes passing {
+    0% {
+        right: -150px
+    }
+
+    100% {
+        right: 5000px
+    }
+}
+
+/* SUNLIGHT */
+.sunlight {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7)), url(images/sunlight/sunlight_bg.jpg) bottom/cover no-repeat fixed;
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    color: rgb(255, 255, 255);
+}
+
+.item {
+    grid-column: 1 / 11;
+    display: flex;
+    border: 3px dashed rgb(255, 255, 255);
+}
+
+.info {
+    background: rgba(51, 57, 65, 0.662);
+    flex: 0 1 50%;
+    padding: 10px;
+}
+
+.pic {
+    flex: 1 0 50%;
+}
+
+.sharkguy {
+    display: flex;
+    justify-content: center;
+}
+
+.shark {
+    background: url(images/sunlight/shark1.png) center/contain no-repeat;
+    width: 350px;
+    height: 200px;
+    animation-name: floating;
+    position: relative;
+    top: 0px;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.shark:hover {
+    background: url(images/sunlight/shark2.png) center/contain no-repeat;
+}
+
+@keyframes floating {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: 30px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+/* TWILIGHT */
+.twilight {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7)), url(images/twilight/twilight_bg.jpg) bottom/cover no-repeat fixed;
+    font-family: "Grenze Gotisch", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+
+    color: rgb(255, 255, 255);
+}
+
+.jellyfish {
+    margin: auto;
+    animation-name: jellyfish;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes jellyfish {
+    0% {
+        scale: 100%
+    }
+
+    50% {
+        scale: 100% 80%;
+        rotate: 10deg;
+    }
+
+    100% {
+        scale: 100%
+    }
+}
+
+/* MIDNIGHT */
+.midnight {
+    background: url(images/midnight/midnight_bg.jpg) bottom/cover no-repeat fixed;
+    font-family: "Imbue", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+    color: rgb(255, 255, 255);
+}
+
+.midnight h2,
+.midnight h3 {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 100;
+    font-style: normal;
+}
+
+ol a {
+    color: rgb(191, 81, 42);
+}
+
+ol a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.anglerfish {
+    grid-column: 11 / 13;
+    background: url(images/midnight/animanglerfish.png) center/contain no-repeat;
+    width: 200px;
+    height: 200px;
+    animation-name: floating;
+    position: relative;
+    top: 0px;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.lure {
+    width: 30px;
+    height: 30px;
+    background: rgb(242, 232, 182);
+    border-radius: 3rem;
+    animation-name: lure;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes lure {
+    0% {
+        opacity: 100%
+    }
+
+    50% {
+        opacity: 20%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
