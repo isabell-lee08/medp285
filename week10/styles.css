@@ -1,0 +1,95 @@
+
+body {
+	font-family: helvetica, arial, sans-serif;
+}
+
+h1 {
+	color: #3a241d;
+	text-align: center;
+}
+
+#left-container {
+	left: 0px;
+}
+
+#right-container {
+	right: 0px;
+}
+
+.container {
+	background-color: #eee;
+	width: 15%;
+	top: 0px;
+	position: absolute;
+	height: 100%;
+	padding: 10px;
+}
+
+.topping-holder {
+	position: relative;
+	height: 13%;
+	left: -10px;
+}
+
+.topping {
+	position: absolute;
+	max-width: 150%;
+	max-height: 150%;
+	z-index: 2;
+}
+
+#page {
+	display: flex;
+	justify-content: center;
+}
+
+.cake-bottom {
+	width: 60%;
+	height: 35%;
+	background: #ead29c;
+	border-radius: 3rem 3rem 0 0;
+	position: absolute;
+	bottom: 0.5%;
+	left: 20%;
+	z-index: 1;
+}
+
+.cake-middle {
+	width: 45%;
+	height: 25%;
+	background: #ead29c;
+	border-radius: 3rem 3rem 0 0;
+	position: absolute;
+	bottom: 35%;
+	left: 27.5%;
+	z-index: 1;
+}
+
+.cake-top {
+	width: 30%;
+	height: 20%;
+	background: #ead29c;
+	border-radius: 3rem 3rem 0 0;
+	position: absolute;
+	bottom: 60%;
+	left: 35%;
+	z-index: 1;
+}
+
+.frosting {
+	--s: 44px; /* size of the wave */
+	--b: 16px; /* thickness of the line */
+	--m: 0.8; /* curvature of the wave [0 2] */
+	
+	background: #df8aac;
+	--R: calc(var(--s)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+	height: calc(2*var(--R));
+	width: 100%;
+	--_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
+	--mask:
+	  radial-gradient(65.6px at 50% calc(100% - 92px),#000 99%,#0000 101%) calc(50% - 80px) 0/160px 100%,
+	  radial-gradient(65.6px at 50% calc(100% + 52px),#0000 99%,#000 101%) 50% calc(100% - 40px)/160px 100% repeat-x;
+	-webkit-mask: var(--mask);
+			mask: var(--mask);
+	border-radius: 3rem 3rem 0 0;
+  }
