@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Deep Sea: Hadal</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="hadal">
+    <canvas class="hadalpelagic"></canvas>
+    <div class="container">
+        <header>
+            <h1>THE DEEP SEA</h1>
+        </header>
+        <main>
+            <h2>Hadal</h2>
+            <p>Also called the hadalpelagic zone, this zone encompasses our ocean's many trenches. The word "hadal"
+                comes from Hades, the Greek god of the underworld. Over 90% of the hadal zone is found in subduction
+                trenches. Even this far down, life still persists.</p>
+
+            <p>Deep in the ocean, snow seems to fall, caused by the mass descent of organic material. Originating from
+                the upper layers of the ocean, marine snow provides a source of energy for the deepest depths.
+            </p>
+
+            <h2 style="text-align:right;">What lives here?</h2>
+            <section class="item">
+                <article class="info">
+                    <h3><a href="flatfish/flatfish.html">&#9734;The Challenger Flatfish...</a></h3>
+                    <p>...</p>
+                </article>
+            </section>
+        </main>
+        <nav>
+            <ul>
+                <p>
+                    <li><a href="index.html">surface</a></li>
+                </p>
+                <p>
+                    <li><a href="sunlight.html">sunlight</a></li>
+                    <li><a href="twilight.html">twilight</a></li>
+                    <li><a href="midnight.html">midnight</a></li>
+                    <li><a href="abyssal.html">abyssal</a></li>
+                    <li><a style="color: rgb(191, 81, 42)" href="hadal.html">hadal</a></li>
+                </p>
+            </ul>
+        </nav>
+    </div>
+
+    <audio preload="auto" loop id="hadalpelagic">
+        <source src="audio/hadal_ambience.mp3">
+    </audio>
+
+    <script>
+        var x = document.getElementById("hadalpelagic");
+
+        function togglePlay() {
+            return hadalpelagic.paused ? hadalpelagic.play() : hadalpelagic.pause();
+        };
+
+    </script>
+
+    <script class="hadalpelagic">
+        // Define array to hold snowflake objects
+        let snowflakes = [];
+        var canvas;
+
+        function setup() {
+            canvas = createCanvas(windowWidth, windowHeight)
+            canvas.position(0, 0);
+            canvas.style('z-index', '-1')
+
+            angleMode(DEGREES);
+
+            // Create snowflake objects
+            for (let i = 0; i < 300; i++) {
+                // Add a new snowflake object to the array
+                snowflakes.push(new Snowflake());
+            }
+
+            // Create screen reader accessible description
+            describe('Marine snow falling on a black background.');
+        }
+
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight)
+        }
+
+        function draw() {
+
+            background(0, 230);
+
+            // Update and display each snowflake in the array
+            let currentTime = frameCount / 60;
+
+            for (let flake of snowflakes) {
+                // Update each snowflake position and display
+                flake.update(currentTime);
+                flake.display();
+            }
+        }
+
+        // Define the snowflake class
+
+        class Snowflake {
+            constructor() {
+                this.posX = 0;
+                this.posY = random(0, height);
+                this.initialAngle = random(0, 360);
+                this.size = random(0, 5);
+                this.radius = sqrt(random(pow(windowWidth, 2)));
+                this.color = color(255, 255, 255);
+            }
+
+            update(time) {
+                // Define angular speed (degrees / second)
+                let angularSpeed = 2;
+
+                // Calculate the current angle
+                let angle = this.initialAngle + angularSpeed * time;
+
+                // x position follows a sine wave
+                this.posX = width / 2 + this.radius * sin(angle);
+
+                // Different size snowflakes fall at different y speeds
+                let ySpeed = 6 / this.size;
+                this.posY += ySpeed;
+
+                // When snowflake reaches the bottom, move it to the top
+                if (this.posY > height) {
+                    this.posY = -50;
+                }
+            }
+
+            display() {
+                fill(this.color);
+                noStroke();
+                ellipse(this.posX, this.posY, this.size);
+            }
+        }
+    </script>
+
+    <div class="sound" onclick="togglePlay()">&#9835;</div>
+    <footer style="padding: 0px;">&copy;2025 Isabell Lee</footer>
+</body>

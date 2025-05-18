@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Deep Sea: Abyssal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="abyssal">
+    <div class="container">
+        <header>
+            <h1>THE DEEP SEA</h1>
+        </header>
+        <main>
+            <h2>Abyssal</h2>
+            <p>Also called the abyssopelagic zone, ending 6000 meters below the surface. The word "abyss" has Greek
+                origins, meaning "bottomless."</p>
+
+            <p>The abyssal zone is the largest environment on the planet, comprised of our sea floors and covering
+                around 60% of the Earth's surface. It is a severe environment characterized by freezing temperatures and
+                immense pressures.</p>
+
+            <h2 style="text-align:right;">What lives here?</h2>
+            <p>Being among the largest environments on Earth, many strange and undiscovered creatures find themselves at home here.</p>
+            <section class="item">
+                <article class="info">
+                    <h3>Dumbo octopus...</h3>
+                    <p>are the deepest-living octopus species. They are named for their characteristic ears.</p>
+                </article>
+                <article>
+                    <img class="pic" src="images/abyssal/dumbo_octopus.jpg">
+                </article>
+            </section>
+            <hr>
+            <section class="item">
+                <article class="info">
+                    <h3>Cusk eel...</h3>
+                    <p>are not truly eels, but bony fish. Some of the deepest reported fish are cusk eels.</p>
+                </article>
+                <article>
+                    <img class="pic" src="images/abyssal/cusk_eel.jpg">
+                </article>
+            </section>
+        </main>
+        <nav>
+            <ul>
+                <p>
+                    <li><a href="index.html">surface</a></li>
+                </p>
+                <p>
+                    <li><a href="sunlight.html">sunlight</a></li>
+                    <li><a href="twilight.html">twilight</a></li>
+                    <li><a href="midnight.html">midnight</a></li>
+                    <li><a style="color: rgb(191, 81, 42)" href="abyssal.html">abyssal</a></li>
+                    <li><a href="hadal.html">hadal</a></li>
+                </p>
+            </ul>
+        </nav>
+    </div>
+
+	<audio preload="auto" loop id="abyss">
+		<source src="audio/abyss_ambience.mp3">
+	</audio>
+
+	<script>
+		var x = document.getElementById("abyss");
+
+		function togglePlay() {
+			return abyss.paused ? abyss.play() : abyss.pause();
+		};
+
+	</script>
+
+    <div class="sound" onclick="togglePlay()">&#9835;</div>
+    <footer style="padding: 0px;">&copy;2025 Isabell Lee</footer>
+</body>

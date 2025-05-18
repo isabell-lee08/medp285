@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Deep Sea: Midnight</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="midnight">
+    <div class="container">
+        <header>
+            <h1>THE DEEP SEA</h1>
+        </header>
+        <main>
+            <h2>Midnight</h2>
+            <p>Also called the bathypelagic zone, reaching depths of 4000 meters. No light passes these depths, having
+                long been absorbed. In many places, the midnight zone hits the sea floor. The zone hovers around a
+                perpetual 4&deg Celsius / 39&deg Fahrenheit. It is home to 70% of all life in the sea.</p>
+
+            <p>
+                Explore through documentary...
+            <ol>
+                <li><a href="https://www.youtube.com/watch?v=o_Zs8UdCArM&pp=ygUNbWlkbmlnaHQgem9uZQ%3D%3D"
+                        target="_blank">Into the Midnight Zone: Secrets of the Ocean Void</a></li>
+                <li><a href="https://www.youtube.com/watch?v=vkfTSlTnaBQ&pp=ygUNbWlkbmlnaHQgem9uZQ%3D%3D"
+                        target="_blank">What Lurks in the Midnight Zone? | Blue Planet</a></li>
+                <li><a href="https://www.youtube.com/watch?v=Uh3fNYVwDXM&ab_channel=NaturalWorldFacts"
+                        target="_blank">Ocean Watch | A Tale of Deep Sea Exploration</a></li>
+            </ol>
+            </p>
+
+            <h2 style="text-align:right;">What lives here?</h2>
+            <p>Very little is known about the creatures that live here. Bioluminescence is common, and the microbial
+                environment is very unique.</p>
+            <section class="item">
+                <article class="info">
+                    <h3>Anglerfish...</h3>
+                    <p>have a bioluminescent lure fixed to their heads, which helps them attract prey.</p>
+                </article>
+                <article>
+                    <img class="pic" src="images/midnight/anglerfish.jpg">
+                </article>
+            </section>
+            <hr>
+            <section class="item">
+                <article class="pic">
+                    <img src="images/midnight/zooplankton.jpg">
+                </article>
+                <article class="info">
+                    <h3><a href="zooplankton/zooplankton.html">&#9734;Zooplankton...</a></h3>
+                    <p>are tiny organisms that provide food for many other creatures.
+                    </p>
+                </article>
+            </section>
+            <hr>
+        </main>
+        <section class="anglerfish">
+            <div class="lure"></div>
+        </section>
+        <nav>
+            <ul>
+                <p>
+                    <li><a href="index.html">surface</a></li>
+                </p>
+                <p>
+                    <li><a href="sunlight.html">sunlight</a></li>
+                    <li><a href="twilight.html">twilight</a></li>
+                    <li><a style="color: rgb(191, 81, 42)" href="midnight.html">midnight</a></li>
+                    <li><a href="abyssal.html">abyssal</a></li>
+					<li><a href="hadal.html">hadal</a></li>
+                </p>
+            </ul>
+        </nav>
+    </div>
+
+	<audio preload="auto" loop id="midnight">
+		<source src="audio/midnight_ambience.mp3">
+	</audio>
+
+	<script>
+		var x = document.getElementById("midnight");
+
+		function togglePlay() {
+			return midnight.paused ? midnight.play() : midnight.pause();
+		};
+
+	</script>
+
+    <div class="sound" onclick="togglePlay()">&#9835;</div>
+    <footer style="padding: 0px;">&copy;2025 Isabell Lee</footer>
+</body>

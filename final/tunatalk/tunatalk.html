@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <meta charset="utf-8" />
+</head>
+
+<body class="tuna">
+    <div class="tunabox">
+    <p>The tuna is very eager to speak with you. | <a href="../sunlight.html">Go back.</a></p>
+
+<div class="tunabg"><div class="tunaguy"></div></div>
+
+    <p>Tuna: <span id="reply">...</span></p>
+    <input id="textfield" type="text" value=""> <button id="send" onclick="ClearFields()" ;>Send</button>
+    <script>
+
+        function ClearFields() {
+            if ($("#textfield").val() == '') {
+                html("");
+            }
+
+            else
+
+                document.getElementById("textfield").value = "";
+            $("#reply").html("");
+
+            let numVal = Math.floor(Math.random() * 10)
+            const expr = numVal
+            switch (expr) {
+                case 1:
+                    $("#reply").html("blub")
+                    break
+                case 2:
+                    $("#reply").html("blub blub?")
+                    break
+                case 3:
+                    $("#reply").html("blub blub!")
+                    break
+                case 4:
+                    $("#reply").html("bluuub")
+                    break
+                case 5:
+                    $("#reply").html("blub...")
+                    break
+                case 6:
+                    $("#reply").html("...blub?")
+                    break
+                case 7:
+                    $("#reply").html("blub blub")
+                    break
+                case 8:
+                    $("#reply").html("blub!")
+                    break
+                case 9:
+                    $("#reply").html("blub blub blub")
+                    break
+                case 10:
+                    $("#reply").html("blub blub...")
+                    break
+                default:
+                    $("#reply").html("...")
+            }
+
+            document.getElementById("reply").innerHTML = + day;
+        }
+
+    </script>
+    </div>
+</body>
+
+</html>
